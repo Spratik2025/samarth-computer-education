@@ -1,0 +1,215 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samarth Computer Education</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <style>
+        .course-card {
+            height: 100%;
+            min-height: 260px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .course-card:hover {
+            transform: scale(1.05);
+        }
+
+        .course-img {
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+
+        .navbar-brand img {
+            height: 40px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="{% static 'images/logo.png' %}" alt="logo">
+            Samarth Computer Education
+        </a>
+
+    </div>
+</nav>
+
+<!-- Hero -->
+<div class="container text-center mt-5">
+    <h1 class="display-4">Welcome to Samarth Computer Education</h1>
+    <p class="lead">Learn Computer Skills for a Better Future</p>
+</div>
+
+<!-- About -->
+<section class="container mt-5">
+    <div class="card shadow p-4">
+        <h2 class="text-center mb-3">About Us</h2>
+        <p class="text-center">
+Welcome to our MS-CIT Training Institute, where learning meets technology. We are dedicated to providing quality computer education and digital skills through expert guidance, practical training, and a student-focused approach.
+Our mission is to empower learners with the knowledge and confidence needed to succeed in today's digital world and build a brighter future.
+
+        </p>
+    </div>
+</section>
+
+<!-- Courses -->
+<section class="container mt-5">
+    <h2 class="text-center mb-4">Our Courses</h2>
+
+    <div class="row">
+
+        <div class="col-md-4 mb-3">
+            <div class="card shadow p-3 course-card">
+                <img src="{% static 'images/logo.png' %}" class="course-img">
+                <h4>MS-CIT</h4>
+                <p>Basic Computer Education Course</p>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+            <div class="card shadow p-3 course-card">
+                <img src="{% static 'images/tally.png' %}" class="course-img">
+                <h4>Tally Prime</h4>
+                <p>Accounting & GST Training</p>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+            <div class="card shadow p-3 course-card">
+                <img src="{% static 'images/dtp.png' %}" class="course-img">
+                <h4>DTP</h4>
+                <p>Desktop Publishing Course</p>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+            <div class="card shadow p-3 course-card">
+                <img src="{% static 'images/web.png' %}" class="course-img">
+                <h4>Web Designing</h4>
+                <p>HTML, CSS, Bootstrap & Django</p>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+            <div class="card shadow p-3 course-card">
+                <img src="{% static 'images/c.png' %}" class="course-img">
+                <h4>C Programming</h4>
+                <p>Programming Fundamentals</p>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+            <div class="card shadow p-3 course-card">
+                <img src="{% static 'images/java.png' %}" class="course-img">
+                <h4>C++ & Java</h4>
+                <p>Object Oriented Programming</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="container mt-5 mb-5">
+    <div class="card shadow p-4">
+        <h2 class="text-center mb-4">Student Registration</h2>
+
+```
+    <form method="POST">
+        {% csrf_token %}
+
+        <div class="mb-3">
+            <label>Full Name</label>
+            <input type="text" name="name" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+            <label>Mobile Number</label>
+            <input type="text" name="mobile" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+            <label>Email</label>
+            <input type="email" name="email" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+            <label>Select Course</label>
+            <select name="course" class="form-control">
+                <option>MS-CIT</option>
+                <option>Tally Prime</option>
+                <option>DTP</option>
+                <option>Web Designing</option>
+                <option>C Programming</option>
+                <option>C++ & Java</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+            Register
+        </button>
+    </form>
+</div>
+```
+
+</section>
+
+
+<!-- Contact -->
+<section class="container mt-5 mb-5">
+    <div class="card shadow p-4">
+        <h2 class="text-center mb-4">Contact Us</h2>
+
+        <p>
+            <strong>Institute Name:</strong><br>
+            Samarth Computer Education
+        </p>
+
+        <p>
+            <strong>Address:</strong><br>
+            Government Hospital Road,<br>
+            Opposite Bharat Vidyalaya,<br>
+            Makani, Maharashtra, India
+        </p>
+
+        <p>
+            <strong>Mobile:</strong><br>
+            +91 8847748230
+        </p>
+
+        <p>
+            <strong>Email:</strong><br>
+            Santoshwaghmarelohara@gmail.com
+        </p>
+    </div>
+</section>
+
+
+
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center p-3">
+    © 2026 Samarth Computer Education. All Rights Reserved.
+</footer>
+
+</body>
+</html>
