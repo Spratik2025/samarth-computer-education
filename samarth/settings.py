@@ -12,9 +12,8 @@ DEBUG = True
 ALLOWED_HOSTS = [
     "127.0.0.1",
     "localhost",
-    "samarth-computer-education-1.onrender.com",
+    "samarth-computer-education-2.onrender.com",
 ]
-
 # Application definition
 INSTALLED_APPS = [
     'django.contrib.admin',
